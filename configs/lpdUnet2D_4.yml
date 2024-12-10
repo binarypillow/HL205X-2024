@@ -1,0 +1,25 @@
+name: lpdUnet2D_4
+save_output: True
+use_early_stopping: True
+
+img_width: 147
+img_height: 147
+img_depth: 21
+
+batch_size: 6
+train_samples: 500
+dataset: ellipsoids
+loss: MSEDice
+alpha: 0.5
+
+num_labels: 6
+
+noise_interval: [0.1, 1.2]
+kernel_size: 5
+sigma: 2.0
+
+num_lpd_iterations: 3
+
+num_epochs: 200
+weight_decay: 1.0e-2
+learning_rate: 1.0e-4

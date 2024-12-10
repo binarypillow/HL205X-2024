@@ -1,0 +1,8 @@
+2024-12-10 01:03:44 | INFO | Saving logs to outputs/_trainingParams/20241210_0103_logs.log...
+2024-12-10 01:03:44 | INFO | lpdUnet2D_3 -> 26.85 +/- 0.22 GB 200.00 +/- 0.00 epochs
+2024-12-10 01:03:44 | INFO | lpdUnetTransformer2D_1 -> 17.91 +/- 0.41 GB 200.00 +/- 0.00 epochs
+2024-12-10 01:03:44 | INFO | lpdUnet3D_1 -> 31.04 +/- 0.20 GB 194.00 +/- 8.49 epochs
+2024-12-10 01:03:44 | INFO | crossSinogramLpdUnet2D_1 -> 33.43 +/- 0.12 GB 182.67 +/- 24.51 epochs
+2024-12-10 01:03:44 | INFO | crossImageLpdUnet2D_1 -> 26.34 +/- 0.05 GB 198.00 +/- 2.83 epochs
+2024-12-10 01:03:44 | INFO | crossUpdateLpdUnet2D_1 -> 36.64 +/- 0.14 GB 183.67 +/- 23.10 epochs
+2024-12-10 01:03:44 | INFO | crossConcatLpdUnet2D_1 -> 43.79 +/- 0.06 GB 200.00 +/- 0.00 epochs

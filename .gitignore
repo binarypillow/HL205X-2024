@@ -1,0 +1,16 @@
+# Environments
+.env
+.venv
+.conda
+
+# Python
+__pycache__
+
+# Visual Studio Code
+.vscode/
+
+# Remove Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Clinical Data
+data/
