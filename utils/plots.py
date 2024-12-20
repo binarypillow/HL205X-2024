@@ -86,6 +86,7 @@ def plot_images(image_pairs: list, n_col=4, fig_dim=None) -> None:
         image_pairs (list): A list of tuples, each containing:
             - img (np.ndarray): The image to be displayed.
             - title (str): The title of the subplot.
+            - data_range (tuple): The range of pixel values in the image.
         n_col (int): Number of columns in the grid. Default is 4.
         fig_dim (tuple): Figure dimensions. If None, the default dimensions are used.
 
@@ -105,10 +106,21 @@ def plot_images(image_pairs: list, n_col=4, fig_dim=None) -> None:
     ax = np.array(ax).flatten()  # Flatten to 1D for easier indexing
 
     # Plot each image and set title
-    for i, (img, title) in enumerate(image_pairs):
-        ax[i].imshow(img, cmap="gray", vmin=0, vmax=1.5)
+    for i, (img, title, data_range) in enumerate(image_pairs):
+        if data_range is None:
+            data_range = (img.min(), img.max())
+        im = ax[i].imshow(img, cmap="gray", vmin=data_range[0], vmax=data_range[1])
         ax[i].set_title(title, fontsize="medium")
         ax[i].axis("off")
+        # Create a colorbar for the current image
+        fig.colorbar(
+            im,
+            ax=ax[i],
+            fraction=0.05,
+            pad=0.05,
+            shrink=0.75,
+            ticks=np.arange(data_range[0], data_range[1] + 1, 0.3),
+        )
 
     # Hide any remaining unused subplots
     for j in range(len(image_pairs), len(ax)):
